@@ -1,5 +1,18 @@
-<div *ngFor="let transferencia of transferencias">
-  <p>Valor: {{transferencia?.valor}}</p>
-  <p>Destino: {{transferencia?.destino}} </p>
-  <p>Data: {{transferencia?.data}} </p>
-</div>
+<table>
+  <thead>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Destino</th>
+  </thead>
+  <tbody *ngIf="transferencias.length >0; else listaVazia">
+    <tr *ngFor="let transferencia of transferencias">
+      <td>{{transferencia?.valor}}</td>
+      <td>{{transferencia?.destino}}</td>
+      <td>{{transferencia?.data | date:'short'}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #listaVazia>
+  <p>Nenhuma transação realizada</p>
+</ng-template>
