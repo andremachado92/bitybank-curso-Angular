@@ -13,7 +13,7 @@ export class ExtratoComponent implements OnInit {
   constructor(private service: TransferenciaService) { }
 
   ngOnInit(): void {
-    this.transferencias = this.transferencias;
+    this.transferencias = this.service.transferencias;
   }
 
 }

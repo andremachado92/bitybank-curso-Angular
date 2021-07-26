@@ -11,7 +11,7 @@ export class TransferenciaService {
     this.listaTransferencia = [];
   }
 
-  get trnasferencias(){
+  get transferencias(){
     return this.listaTransferencia;
   }
 
