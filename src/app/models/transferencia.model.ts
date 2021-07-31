@@ -1,10 +1,6 @@
 export interface Transferencia {
-  id: string;
+  id?: string;
   valor: number;
-  destino: string;
-  data: Date;
-}
-
-export interface RootObject {
-  transferencias: Transferencia[];
+  destino: string | number;
+  data?: Date;
 }
